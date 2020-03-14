@@ -1,0 +1,7 @@
+{
+  "name": "agriControl",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

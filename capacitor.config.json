@@ -1,0 +1,8 @@
+{
+  "appId": "io.ionic.starter",
+  "appName": "agriControl",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "cordova": {}
+}
