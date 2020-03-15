@@ -20,6 +20,10 @@ const routes: Routes = [
     path: 'atividade',
     loadChildren: () => import('./pages/operador/visualiza-atividade/visualiza-atividade.module').then( m => m.VisualizaAtividadePageModule)
   },
+  {
+    path: 'tarefa',
+    loadChildren: () => import('./pages/operador/tarefa-executando/tarefa-executando.module').then( m => m.TarefaExecutandoPageModule)
+  },
 ];
 
 @NgModule({

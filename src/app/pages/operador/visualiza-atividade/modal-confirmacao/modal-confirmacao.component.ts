@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { PopoverService } from '../../../../services/popover.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { PopoverService } from '../../../../services/popover.service';
 })
 export class ModalConfirmacaoComponent implements OnInit {
 
-    constructor(private popoverService: PopoverService) {
+    constructor(private popoverService: PopoverService, private router: Router) {
     }
 
     ngOnInit() {
@@ -16,5 +17,10 @@ export class ModalConfirmacaoComponent implements OnInit {
 
     async fechar() {
         await this.popoverService.fechar();
+    }
+
+    iniciar() {
+        this.fechar();
+        this.router.navigateByUrl('/tarefa');
     }
 }

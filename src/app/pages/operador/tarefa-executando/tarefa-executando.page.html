@@ -1,0 +1,20 @@
+<div class="timer-group">
+  <div class="timer second">
+    <div class="hand"><span></span></div>
+    <div class="hand"><span></span></div>
+  </div>
+  <div class="face">
+    <h2>Tempo executado</h2>
+    <p id="lazy">{{horaAtual}}</p>
+  </div>
+</div>
+<ion-row>
+  <ion-col>
+    <ion-button>
+      <ion-icon slot="icon-only" name="pause"></ion-icon>
+    </ion-button>
+    <ion-button (click)="parar()">
+      <ion-icon slot="icon-only" name="stop" ></ion-icon>
+    </ion-button>
+  </ion-col>
+</ion-row>
