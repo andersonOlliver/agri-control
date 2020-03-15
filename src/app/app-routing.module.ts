@@ -24,6 +24,10 @@ const routes: Routes = [
     path: 'tarefa',
     loadChildren: () => import('./pages/operador/tarefa-executando/tarefa-executando.module').then( m => m.TarefaExecutandoPageModule)
   },
+  {
+    path: 'instrucoes',
+    loadChildren: () => import('./pages/operador/instrucoes/instrucoes.module').then( m => m.InstrucoesPageModule)
+  },
 ];
 
 @NgModule({

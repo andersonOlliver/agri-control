@@ -1,0 +1,39 @@
+<ion-content >
+  <p class="font-weith-bold">1. Calibragem da Máquina</p>
+  <p class="font-weith-bold">
+    Informações: <br>
+    Vazão dos bicos: 10mm
+  </p>
+  <ion-list>
+    <ion-list-header>Faça a verificação desses itens:</ion-list-header>
+    <ion-item>
+      <ion-label>Vazão dos bicos</ion-label>
+      <ion-checkbox color="primary" checked slot="start"></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-checkbox slot="start"></ion-checkbox>
+      <ion-label>Mecanismo agitador</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-checkbox slot="start"></ion-checkbox>
+      <ion-label>Mangueiras e acoplamentos</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-checkbox slot="start"></ion-checkbox>
+      <ion-label>Vazamento de pluverização e seções</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-checkbox slot="start"></ion-checkbox>
+      <ion-label>Redução de escorrimento ou gotejamento</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-checkbox slot="start"></ion-checkbox>
+      <ion-label>Limpeza de filtros(linhas, bicos e barras)</ion-label>
+    </ion-item>
+  </ion-list>
+
+
+  <ion-button color="success" class="ion-float-end" (click)="proximo.emit(2)">
+    Próximo
+  </ion-button>
+</ion-content>

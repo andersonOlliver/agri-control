@@ -14,7 +14,7 @@ import { VisualizaAtividadePage } from './visualiza-atividade.page';
         CommonModule,
         FormsModule,
         IonicModule,
-        VisualizaAtividadePageRoutingModule
+        VisualizaAtividadePageRoutingModule,
     ],
     declarations: [VisualizaAtividadePage],
     entryComponents: []

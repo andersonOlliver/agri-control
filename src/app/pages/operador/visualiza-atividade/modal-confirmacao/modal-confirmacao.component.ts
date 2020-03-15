@@ -3,24 +3,29 @@ import { Router } from '@angular/router';
 import { PopoverService } from '../../../../services/popover.service';
 
 @Component({
-    selector: 'app-modal-confirmacao',
-    templateUrl: './modal-confirmacao.component.html',
-    styleUrls: ['./modal-confirmacao.component.scss'],
+  selector: 'app-modal-confirmacao',
+  templateUrl: './modal-confirmacao.component.html',
+  styleUrls: ['./modal-confirmacao.component.scss'],
 })
 export class ModalConfirmacaoComponent implements OnInit {
 
-    constructor(private popoverService: PopoverService, private router: Router) {
-    }
+  constructor(private popoverService: PopoverService, private router: Router) {
+  }
 
-    ngOnInit() {
-    }
+  ngOnInit() {
+  }
 
-    async fechar() {
-        await this.popoverService.fechar();
-    }
+  async fechar() {
+    await this.popoverService.fechar();
+  }
 
-    iniciar() {
-        this.fechar();
-        this.router.navigateByUrl('/tarefa');
-    }
+  async iniciar() {
+    await this.fechar();
+    await this.router.navigateByUrl('/tarefa');
+  }
+
+  async instrucoes() {
+    await this.fechar();
+    await this.router.navigateByUrl('/instrucoes');
+  }
 }
