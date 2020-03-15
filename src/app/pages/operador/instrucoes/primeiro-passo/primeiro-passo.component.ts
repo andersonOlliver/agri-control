@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-primeiro-passo',
@@ -6,10 +6,13 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./primeiro-passo.component.scss'],
 })
 export class PrimeiroPassoComponent implements OnInit {
-
+  @Input() atividade: any;
   @Output() proximo = new EventEmitter<number>();
-  constructor() { }
 
-  ngOnInit() {}
+  constructor() {
+  }
+
+  ngOnInit() {
+  }
 
 }

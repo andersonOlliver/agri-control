@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { first } from 'rxjs/operators';
 import { DadosMeteorologicoService } from '../../../services/dados-meteorologico.service';
@@ -12,7 +12,8 @@ import { ModalConfirmacaoComponent } from './modal-confirmacao/modal-confirmacao
   templateUrl: './visualiza-atividade.page.html',
   styleUrls: ['./visualiza-atividade.page.scss'],
 })
-export class VisualizaAtividadePage implements OnInit {
+export class VisualizaAtividadePage implements OnInit, OnDestroy {
+  private atividade: any;
 
   constructor(private activedRoute: ActivatedRoute,
               private dadosMeteorologicoService: DadosMeteorologicoService,
@@ -25,11 +26,19 @@ export class VisualizaAtividadePage implements OnInit {
     this.buscarAtividade();
   }
 
+  ngOnDestroy(): void {
+    localStorage.removeItem('tarefa');
+  }
+
   private buscarAtividade() {
     this.activedRoute.params.subscribe(x => {
       console.log(x);
       this.operadorService.obterAtividade(x.id)
-        .subscribe(xa => console.log(xa));
+        .subscribe(xa => {
+          console.log(xa);
+          this.atividade = xa;
+          localStorage.setItem('tarefa', JSON.stringify(this.atividade));
+        });
     });
 
   }
@@ -51,4 +60,5 @@ export class VisualizaAtividadePage implements OnInit {
     //     }
     // });
   }
+
 }

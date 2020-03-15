@@ -16,7 +16,7 @@
     <ion-label>Talhão A14</ion-label>
   </ion-chip>
 
-  <app-primeiro-passo *ngIf="tela === 1" (proximo)="mudarTela($event)"></app-primeiro-passo>
+  <app-primeiro-passo *ngIf="tela === 1" [atividade]="atividade" (proximo)="mudarTela($event)"></app-primeiro-passo>
   <app-segundo-passo *ngIf="tela === 2" (proximo)="mudarTela($event)"></app-segundo-passo>
   <app-terceiro-passo *ngIf="tela === 3" (proximo)="mudarTela($event)"></app-terceiro-passo>
 

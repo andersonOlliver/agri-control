@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { PopoverService } from '../../../../services/popover.service';
 
 @Component({
@@ -8,11 +8,13 @@ import { PopoverService } from '../../../../services/popover.service';
   styleUrls: ['./modal-confirmacao.component.scss'],
 })
 export class ModalConfirmacaoComponent implements OnInit {
+  private params: Params;
 
-  constructor(private popoverService: PopoverService, private router: Router) {
+  constructor(private activatedRoute: ActivatedRoute, private popoverService: PopoverService, private router: Router) {
   }
 
   ngOnInit() {
+    this.activatedRoute.params.subscribe(x => this.params = x);
   }
 
   async fechar() {
