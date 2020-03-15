@@ -8,7 +8,7 @@ import { map } from 'rxjs/operators';
 export class OperadorService {
 
   constructor(private readonly afs: AngularFirestore) {
-
+        []
   }
 
   obterAtividadesAExecutar() {

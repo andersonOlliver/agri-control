@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { first } from 'rxjs/operators';
 import { DadosMeteorologicoService } from '../../../services/dados-meteorologico.service';
 import { PopoverService } from '../../../services/popover.service';
 import { ModalConfirmacaoComponent } from './modal-confirmacao/modal-confirmacao.component';
@@ -17,13 +16,12 @@ export class VisualizaAtividadePage implements OnInit {
     ngOnInit() {
     }
 
-    iniciar() {
-
-        this.dadosMeteorologicoService.obterInformacaoDoTalhao()
-            .pipe(first()).subscribe(async x => {
-            if (x === 1) {
-                await this.popoverService.abrir(ModalConfirmacaoComponent);
-            }
-        });
+    async iniciar() {
+        await this.popoverService.abrir(ModalConfirmacaoComponent);
+        // this.dadosMeteorologicoService.obterInformacaoDoTalhao()
+        //     .pipe(first()).subscribe(async x => {
+        //     if (x === 1) {
+        //     }
+        // });
     }
 }

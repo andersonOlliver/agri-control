@@ -24,3 +24,22 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+
+.font-weith-bold{
+  font-weight: bold;
+}
+
+
+.d-flex{
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.ion-color-success{
+  span{
+    color: white;
+  }
+}
+

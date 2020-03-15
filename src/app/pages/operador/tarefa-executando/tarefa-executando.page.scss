@@ -1,9 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200,300,400);
-
-
-body {
-  padding: 20px;
-}
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200,300,400');
 
 .timer-group {
   color: #fff;
@@ -29,7 +24,7 @@ body {
   content: "";
   display: block;
   height: 80px;
-  left: 0px;
+  left: 0;
   position: absolute;
   width: 80px;
   top: 10px;
@@ -73,50 +68,6 @@ body {
 
 .timer .hand:last-child span {
   animation-name: spin2;
-}
-
-.timer.hour {
-  background: rgba(0, 0, 0, .3);
-  height: 400px;
-  left: 0;
-  width: 400px;
-  top: 0;
-}
-
-.timer.hour .hand span {
-  animation-duration: 3600s;
-  border-top-color: rgba(255, 0, 255, .4);
-  border-right-color: rgba(255, 0, 255, .4);
-  border-width: 200px;
-}
-
-.timer.hour:after {
-  height: 360px;
-  left: 20px;
-  width: 360px;
-  top: 20px;
-}
-
-.timer.minute {
-  background: rgba(0, 0, 0, .2);
-  height: 350px;
-  left: 25px;
-  width: 350px;
-  top: 25px;
-}
-
-.timer.minute .hand span {
-  animation-duration: 60s;
-  border-top-color: rgba(0, 255, 255, .4);
-  border-right-color: rgba(0, 255, 255, .4);
-  border-width: 175px;
-}
-
-.timer.minute:after {
-  height: 310px;
-  left: 20px;
-  width: 310px;
-  top: 20px;
 }
 
 .timer.second {
@@ -189,4 +140,10 @@ body {
   100% {
     transform: rotate(405deg);
   }
+}
+
+.label-atualizacao {
+  color: var(--ion-color-medium);
+  font-weight: bold;
+  text-align: end;
 }
