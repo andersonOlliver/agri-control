@@ -1,30 +1,29 @@
 <ion-header>
-    <ion-toolbar>
-        <ion-buttons slot="start">
-            <ion-back-button></ion-back-button>
-        </ion-buttons>
-        <ion-title>AgriControl</ion-title>
-    </ion-toolbar>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>AgriControl</ion-title>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content>
-    <p class="label-atualizacao">
-      <small>Última atualização: {{hoje | date:'dd/MM HH:mm' }}</small>
+  <p class="label-atualizacao">
+    <small>Última atualização: {{hoje | date:'dd/MM HH:mm' }}</small>
 
-    </p>
-    <p class="ion-text-center">Tempo de execução da operação</p>
-    <div class="timer-group">
-        <div class="timer second">
-            <div class="hand"><span></span></div>
-            <div class="hand"><span></span></div>
-        </div>
-        <div class="face">
-            <h2>Tempo executado</h2>
-            <p id="lazy">{{horaAtual}}</p>
-        </div>
+  </p>
+  <p class="ion-text-center">Tempo de execução da operação</p>
+  <div class="timer-group">
+    <div class="timer second">
+      <div class="hand"><span></span></div>
+      <div class="hand"><span></span></div>
     </div>
+    <div class="face">
+      <h2>Tempo executado</h2>
+      <p id="lazy">{{horaAtual}}</p>
+    </div>
+  </div>
 
 
-    <ion-button class="ion-float-end ion-margin-end" fill="outline" (click)="finalizar()">Finalizar</ion-button>
-
+  <ion-button class="ion-float-end ion-margin-end" fill="outline" (click)="finalizar()">Finalizar</ion-button>
 </ion-content>

@@ -3,8 +3,7 @@
   <ion-label color="danger">Condição atual não é ideal.</ion-label>
   <h2 class="titulo">Escolha uma das opções</h2>
 
-  <ion-button class="ion-margin-top acao" expand="block" [routerLink]="'/produtor'">Ver instruções</ion-button>
+  <ion-button class="ion-margin-top acao" expand="block" (click)="instrucoes()">Ver instruções</ion-button>
   <ion-button class="ion-margin-top acao" expand="block" (click)="iniciar()">Começar agora mesmo</ion-button>
   <ion-button fill="fechar" expand="block" color="primary" (click)="fechar()">Fechar</ion-button>
-
 </ion-content>

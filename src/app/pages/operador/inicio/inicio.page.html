@@ -13,60 +13,12 @@
       Operações a serem realizadas
     </ion-list-header>
 
-    <ion-item [routerLink]="'/atividade/1'">
+    <ion-item *ngFor="let tarefa of tarefas" [routerLink]="'/atividade/'+tarefa.id">
       <ion-avatar slot="start">
         <img [src]="'assets/logo-trator.png'">
       </ion-avatar>
       <ion-label>
-        <h2>Titulo</h2>
-        <h3>Tipo - Talhão</h3>
-        <p></p>
-      </ion-label>
-      <ion-note slot="end">Hora</ion-note>
-    </ion-item>
-
-    <ion-item>
-      <ion-avatar slot="start">
-        <img [src]="'assets/logo-trator.png'">
-      </ion-avatar>
-      <ion-label>
-        <h2>Titulo</h2>
-        <h3>Tipo - Talhão</h3>
-        <p></p>
-      </ion-label>
-      <ion-note slot="end">Hora</ion-note>
-    </ion-item>
-
-    <ion-item>
-      <ion-avatar slot="start">
-        <img [src]="'assets/logo-trator.png'">
-      </ion-avatar>
-      <ion-label>
-        <h2>Titulo</h2>
-        <h3>Tipo - Talhão</h3>
-        <p></p>
-      </ion-label>
-      <ion-note slot="end">Hora</ion-note>
-    </ion-item>
-
-    <ion-item>
-      <ion-avatar slot="start">
-        <img [src]="'assets/logo-trator.png'">
-      </ion-avatar>
-      <ion-label>
-        <h2>Titulo</h2>
-        <h3>Tipo - Talhão</h3>
-        <p></p>
-      </ion-label>
-      <ion-note slot="end">Hora</ion-note>
-    </ion-item>
-
-    <ion-item>
-      <ion-avatar slot="start">
-        <img [src]="'assets/logo-trator.png'">
-      </ion-avatar>
-      <ion-label>
-        <h2>Titulo</h2>
+        <h2>{{tarefa.defensivo}}</h2>
         <h3>Tipo - Talhão</h3>
         <p></p>
       </ion-label>

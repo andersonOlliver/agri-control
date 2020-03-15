@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>AgriControl</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h2>Passos para a Aplicação</h2>
+  <ion-chip >
+    <ion-avatar>
+      <img [src]="'assets/local.png'">
+    </ion-avatar>
+    <ion-label>Talhão A14</ion-label>
+  </ion-chip>
+
+  <app-primeiro-passo *ngIf="tela === 1" (proximo)="mudarTela($event)"></app-primeiro-passo>
+  <app-segundo-passo *ngIf="tela === 2" (proximo)="mudarTela($event)"></app-segundo-passo>
+  <app-terceiro-passo *ngIf="tela === 3" (proximo)="mudarTela($event)"></app-terceiro-passo>
+
+</ion-content>

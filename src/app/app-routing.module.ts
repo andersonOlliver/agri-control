@@ -23,11 +23,15 @@ const routes: Routes = [
   {
     path: 'tarefa',
     loadChildren: () => import('./pages/operador/tarefa-executando/tarefa-executando.module').then( m => m.TarefaExecutandoPageModule)
-  },  {
+  },
+  {
     path: 'operacoes',
     loadChildren: () => import('./pages/produtor/operacoes/operacoes.module').then( m => m.OperacoesPageModule)
   },
-
+  {
+    path: 'instrucoes',
+    loadChildren: () => import('./pages/operador/instrucoes/instrucoes.module').then( m => m.InstrucoesPageModule)
+  },
 ];
 
 @NgModule({
